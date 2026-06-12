@@ -1,0 +1,116 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e0faff;
+    /* Light cyan/mint */
+    padding: 20px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 700;
+}
+
+.login-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #e1e8e8;
+}
+
+.login-card h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.card-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid transparent;
+    background-color: #e8f5f3;
+    /* Light green/grey input bg */
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+    font-family: inherit;
+    color: #2c3e50;
+}
+
+.form-group input:focus {
+    background-color: #ffffff;
+    border-color: #76c7b7;
+    box-shadow: 0 0 0 3px rgba(118, 199, 183, 0.2);
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #76c7b7;
+    /* Soft Teal */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #64b5a5;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.signup-link a {
+    color: #34495e;
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}

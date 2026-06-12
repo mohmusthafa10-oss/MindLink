@@ -1,0 +1,310 @@
+.resources-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resources-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.resources-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+}
+
+.resources-header p {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.add-btn {
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 24px;
+    color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.tab.active {
+    background: #00d2ff;
+    color: #0f172a;
+    border-color: #00d2ff;
+    font-weight: bold;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.resource-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 210, 255, 0.3);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: rgba(0, 210, 255, 0.15);
+    color: #5eead4;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #ef4444;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 0.5;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.resource-card h3 {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.resource-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+.text-content {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.resource-form {
+    background: rgba(15, 23, 42, 0.8);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resource-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.resource-form input,
+.resource-form select,
+.resource-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: #fff;
+    font-family: inherit;
+}
+
+.resource-form input:focus,
+.resource-form select:focus,
+.resource-form textarea:focus {
+    outline: none;
+    border-color: #00d2ff;
+}
+
+.resource-form button {
+    padding: 12px;
+    background: #00d2ff;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Modal Styles */
+.resources-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s;
+}
+
+.resources-modal {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.3s;
+}
+
+.resources-modal-header {
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.resources-modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #00d2ff;
+}
+
+.resources-modal-close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
+    transition: color 0.2s;
+}
+
+.resources-modal-close:hover {
+    color: #fff;
+}
+
+.resources-modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    white-space: pre-wrap; /* Preserves line breaks in content */
+}
+
+/* Custom Scrollbar for modal */
+.resources-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+.resources-modal-body::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+.resources-modal-body::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+.resources-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}

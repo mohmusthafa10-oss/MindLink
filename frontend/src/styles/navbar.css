@@ -1,0 +1,211 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: transparent;
+    /* Or #e0f2f1 to match bg */
+    color: #2c3e50;
+    position: relative;
+    z-index: 100;
+}
+
+/* Logo Section */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.brand-icon {
+    font-size: 2.2rem;
+    color: #76c7b7;
+    /* Teal brand color */
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    font-family: 'Nunito', sans-serif;
+    /* Rounded font */
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* Right Side - Profile Section */
+.navbar-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 30px;
+    transition: background-color 0.2s;
+}
+
+.profile-trigger:hover {
+    background-color: rgba(118, 199, 183, 0.1);
+}
+
+.profile-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #2c3e50;
+    /* Fallback color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    overflow: hidden;
+    border: 2px solid #76c7b7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Top Right Dropdown Options (Nav Links) */
+.profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.profile-menu a:hover {
+    color: #76c7b7;
+}
+
+/* Dropdown Menu (Popup) */
+/* Dropdown Menu (Popup) */
+.dropdown-menu {
+    position: absolute;
+    top: 70px;
+    /* Slight offset */
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    /* Glassmorphism */
+    border-radius: 16px;
+    /* softer corners */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    /* Slightly wider */
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: slideFade 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-origin: top right;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.dropdown-header {
+    padding: 15px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 8px;
+}
+
+.user-name {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1.05rem;
+    display: block;
+}
+
+.user-email {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    margin-top: 2px;
+}
+
+.dropdown-item {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    border-radius: 10px;
+    /* rounded hover */
+    margin-bottom: 2px;
+}
+
+.dropdown-item:hover {
+    background-color: #e0f2f1;
+    /* Mint tint */
+    color: #009688;
+    /* Darker teal text */
+    padding-left: 20px;
+    /* Slight slide effect */
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 5px 0;
+}
+
+.logout-btn {
+    color: #e74c3c;
+}
+
+.logout-btn:hover {
+    background-color: #fff5f5;
+    color: #c0392b;
+}
+
+.relax-text {
+    font-family: 'Nunito', sans-serif;
+    color: #555;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
